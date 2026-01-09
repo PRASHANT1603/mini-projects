@@ -1,5 +1,5 @@
 import {getUser} from "../service/auth.js";
-async function restricToLoggedinUserOnly(req, res, next) {
+export async function restricToLoggedinUserOnly(req, res, next) {
   const userUid = req.cookies?.uid;
 
   if(!userUid) 
@@ -13,4 +13,12 @@ async function restricToLoggedinUserOnly(req, res, next) {
   
 }
 
-export default restricToLoggedinUserOnly;
+ export async function chackAuth(req, res, next) {
+  const userUid = req.cookies?.uid;
+  const user = getUser(userUid);
+  req.user = user;
+  next();
+
+}
+
+// export  {restricToLoggedinUserOnly, chackAuth};
