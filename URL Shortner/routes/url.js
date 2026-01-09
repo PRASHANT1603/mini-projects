@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.post('/', handleGenerateNewURL)
 
+
 router.get('/analytics/:shortId', handleGetAnalytics);
 
 export default router;
