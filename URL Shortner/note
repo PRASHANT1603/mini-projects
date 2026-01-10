@@ -1,0 +1,7 @@
+for authentication
+
+s1 = create model (user.js)
+s2 = create route (user.js)
+s3 = create controler (user.js)
+s4 = ragister route in index.js
+s5 = create signup page in view folder
